@@ -1,3 +1,7 @@
 body {
-  background-color: bisque;
+  background-color: ivory;
+}
+
+.large-text {
+  font-size: 2rem;
 }
