@@ -5,3 +5,7 @@ body {
 .large-text {
   font-size: 2rem;
 }
+
+.hero {
+  padding: 3rem;
+}
