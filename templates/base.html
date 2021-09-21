@@ -32,19 +32,19 @@
           ><i class="fas fa-bars black-text"></i
         ></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="black-text">Partner One</a></li>
-          <li><a href="#" class="black-text">Partner Two</a></li>
-          <li><a href="#" class="black-text">Log In/Register</a></li>
-          <li><a href="#" class="black-text">Log Out</a></li>
+          <li><a href="{{ url_for('partner_one') }}" class="black-text">Partner One</a></li>
+          <li><a href="{{ url_for('partner_two') }}" class="black-text">Partner Two</a></li>
+          <li><a href="{{ url_for('login_register') }}" class="black-text">Log In/Register</a></li>
+          <li><a href="{{ url_for('logout') }}" class="black-text">Log Out</a></li>
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">Partner One</a></li>
-      <li><a href="#">Partner Two</a></li>
-      <li><a href="#">Log In/Register</a></li>
-      <li><a href="#">Log Out</a></li>
+      <li><a href="{{ url_for('partner_one')}}">Partner One</a></li>
+      <li><a href="{{ url_for('partner_two')}}">Partner Two</a></li>
+      <li><a href="{{ url_for('login_register')}}">Log In/Register</a></li>
+      <li><a href="{{ url_for('logout')}}">Log Out</a></li>
     </ul>
     <main>{% block content %} {% endblock %}</main>
     <footer>
