@@ -9,3 +9,9 @@ body {
 .hero {
   padding: 3rem;
 }
+
+.sitelink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
