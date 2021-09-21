@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -6,17 +7,31 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", number_list=[1, 2, 3])
 
 
 @app.route("/partner_one")
 def partner_one():
-    return render_template("partner_one.html")
+    partner_data = []
+    with open("data/partner_one.json", "r") as partner_one_data:
+        partner_data = json.load(partner_one_data)
+
+    task_data_array = []
+    with open("data/partner_one_tasks.json", "r") as tasks_data:
+        task_data_array = json.load(tasks_data)
+    return render_template("partner_one.html", partner=partner_data, tasks=task_data_array)
 
 
 @app.route("/partner_two")
 def partner_two():
-    return render_template("partner_two.html")
+    data = []
+    with open("data/partner_two.json", "r") as more_json_data:
+        data = json.load(more_json_data)
+
+    tasks_data = []
+    with open("data/partner_two_tasks.json", "r") as even_more_json_data:
+        tasks_data = json.load(even_more_json_data)
+    return render_template("partner_two.html", partner=data, tasks=tasks_data)
 
 
 @app.route("/login_register")

@@ -1,0 +1,29 @@
+[
+
+{
+    "_id": "3001",
+    "type": "Housework",
+    "date_agreed": "24 Sep 2021",
+    "task_description": "Make dinner and vacuum the house",
+    "agreement_comments": "In return Janice will do the shopping the next morning.",
+    "is_done": "False"
+},
+{
+    "_id": "3002",
+    "type": "Shopping",
+    "date_agreed": "22 Sep 2021",
+    "task_description": "Weekly grocery shopping",
+    "agreement_comments": "Don't forget oatmilk for your mothers visit",
+    "is_done": "False"
+},
+
+{
+    "_id": "3003",
+    "type": "Other",
+    "date_agreed": "20 Sep 2021",
+    "task_description": "You know, that thing.",
+    "agreement_comments": "Make sure the hamster is fed this time.",
+    "is_done": "True"
+}
+
+]

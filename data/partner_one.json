@@ -1,0 +1,25 @@
+[
+    {
+    "_id": "1001",
+    "partner_id": "2001",
+    "name": "Jasper",
+    "password": "JasperJasper"
+
+    },
+
+    {
+        "_id": "1002",
+        "partner_id": "2002",
+        "name": "Janet",
+        "password": "JanetJanet"
+    },
+
+    {
+        "_id": "1003",
+        "partner_id": "2003",
+        "name": "Lena",
+        "password": "LenaLena"
+
+    }
+
+]
