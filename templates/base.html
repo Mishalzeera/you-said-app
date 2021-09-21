@@ -47,6 +47,10 @@
       <li><a href="#">Log Out</a></li>
     </ul>
     <main>{% block content %} {% endblock %}</main>
+    <footer>
+
+      <p class="center-align"><i class="fas fa-copyright"></i> 35Smile <span id="date"></span></p>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -56,5 +60,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{url_for('static', filename="js/script.js")}}"></script>
+    <script>
+      $("#date").text(new Date().getFullYear());    </script>
   </body>
 </html>
