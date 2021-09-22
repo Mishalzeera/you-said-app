@@ -1,11 +1,13 @@
 import os
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
+if os.path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 
 
-@app.route("/index")
+@app.route("/")
 def index():
     return render_template("index.html", number_list=[1, 2, 3])
 
