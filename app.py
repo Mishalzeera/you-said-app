@@ -1,6 +1,6 @@
 import os
 import json
-from flask_pymongo import PyMongo
+# from flask_pymongo import PyMongo
 from flask import Flask, render_template, request, flash
 if os.path.exists("env.py"):
     import env
@@ -13,7 +13,7 @@ app = Flask(__name__)
 # app.secret_key = os.environ.get("SECRET_KEY")
 
 
-mongo = PyMongo(app)
+# mongo = PyMongo(app)
 
 
 @app.route("/")
