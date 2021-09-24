@@ -1,10 +1,19 @@
 import os
 import json
+from flask_pymongo import PyMongo
 from flask import Flask, render_template, request, flash
 if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
+
+
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+
+
+mongo = PyMongo(app)
 
 
 @app.route("/")
@@ -22,6 +31,7 @@ def partner_one():
     with open("data/partner_one_tasks.json", "r") as tasks_data:
         task_data_array = json.load(tasks_data)
     return render_template("partner_one.html", partner=partner_data, tasks=task_data_array)
+    flash("Welcome Partner One")
 
 
 @app.route("/partner_two")

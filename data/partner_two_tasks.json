@@ -6,7 +6,7 @@
     "date_agreed": "4 Aug 2021",
     "task_description": "Run on Sunday",
     "agreement_comments": "Put sweaty clothes in the washing machine you beast. :)",
-    "is_done": "False"
+    "is_done": false
 },
 {
     "_id": "4002",
@@ -14,7 +14,7 @@
     "date_agreed": "22 Oct 2020",
     "task_description": "Call my uncle.",
     "agreement_comments": "He really likes talking to you and I know you hate it but just this once.",
-    "is_done": "True"
+    "is_done": true
 },
 
 {
@@ -23,7 +23,7 @@
     "date_agreed": "7 June 2021",
     "task_description": "Building a lego castle with my son.",
     "agreement_comments": "Let him make the trees, he likes to do them himself.",
-    "is_done": "True"
+    "is_done": true
 }
 
 ]
