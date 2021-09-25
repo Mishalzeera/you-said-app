@@ -1,9 +1,11 @@
 {% extends "base.html" %} {% block content %}
-
+<h1>Welcome {{ user[0].name }}</h1>
+<h4>Answering to Partnership {{ user[0].partnership_id}}</h4>
 <h2>Due Tasks:</h2>
 {% for task in tasks %}
 <h2>{{ task.creator }}</h2>
 <h2>{{ task.date_agreed }}</h2>
 <h1>{{ task.type }}</h1>
-<p>{{ task.description }}</p>
-{% endfor %} < {% endblock %}
+<h4>{{ task.task_description }}</h4>
+<h4>{{ task.comments }}</h4>
+{% endfor %} {% endblock %}

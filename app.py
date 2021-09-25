@@ -25,8 +25,9 @@ def index():
 
 @app.route("/partner_one")
 def partner_one():
+    user = mongo.db.users.find()
     tasks = mongo.db.tasks.find()
-    return render_template("partner_one.html", tasks=tasks)
+    return render_template("partner_one.html", tasks=tasks, user=user)
     # partner_data = []
     # with open("data/partner_one.json", "r") as partner_one_data:
     #     partner_data = json.load(partner_one_data)
