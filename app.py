@@ -2,7 +2,8 @@ import os
 import json
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from flask import Flask, render_template, request, flash
+from flask import (
+    Flask, render_template, request, flash, redirect, session, url_for)
 if os.path.exists("env.py"):
     import env
 
@@ -19,20 +20,22 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html", number_list=[1, 2, 3])
+    return render_template("index.html")
 
 
 @app.route("/partner_one")
 def partner_one():
-    partner_data = []
-    with open("data/partner_one.json", "r") as partner_one_data:
-        partner_data = json.load(partner_one_data)
+    partner_page = mongo.db.tasks.find()
+    return render_template("partner_one.html", tasks=tasks)
+    # partner_data = []
+    # with open("data/partner_one.json", "r") as partner_one_data:
+    #     partner_data = json.load(partner_one_data)
 
-    task_data_array = []
-    with open("data/partner_one_tasks.json", "r") as tasks_data:
-        task_data_array = json.load(tasks_data)
-    return render_template("partner_one.html", partner=partner_data, tasks=task_data_array)
-    flash("Welcome Partner One")
+    # task_data_array = []
+    # with open("data/partner_one_tasks.json", "r") as tasks_data:
+    #     task_data_array = json.load(tasks_data)
+    # return render_template("partner_one.html", partner=partner_data, tasks=task_data_array)
+    # flash("Welcome Partner One")
 
 
 @app.route("/partner_two")

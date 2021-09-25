@@ -1,6 +1,9 @@
 {% extends "base.html" %} {% block content %}
 
-<h1>{{ partner[0] }}</h1>
 <h2>Due Tasks:</h2>
-<h2>{{ tasks }}</h2>
-< {% endblock %}
+{% for task in tasks %}
+<h2>{{ task.creator }}</h2>
+<h2>{{ task.date_agreed }}</h2>
+<h1>{{ task.type }}</h1>
+<p>{{ task.description }}</p>
+{% endfor %} < {% endblock %}
